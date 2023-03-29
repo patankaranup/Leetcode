@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.csv": "csv",
+        "*.jsx": "javascriptreact",
+        "vector": "cpp",
+        "iosfwd": "cpp"
+    }
+}
