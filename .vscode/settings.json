@@ -3,6 +3,8 @@
         "*.csv": "csv",
         "*.jsx": "javascriptreact",
         "vector": "cpp",
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "__hash_table": "cpp",
+        "unordered_map": "cpp"
     }
 }
