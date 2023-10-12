@@ -1,4 +1,4 @@
-class SnapshotArray {
+class SnapShotArray {
 public:
     
     int snap_id;
@@ -29,27 +29,13 @@ public:
     
     int get(int index, int snap_id) {
         
-        int l = 0, r = vec[index].size()-1;
+        auto it = upper_bound(begin(vec[index]), end(vec[index]), make_pair(snap_id, INT_MAX));
+        //pair(snap_id, val)
         
-        int result = 0;
-        while(l <= r) {
-            
-            int mid = l + (r-l)/2;
-            
-            if(vec[index][mid].first <= snap_id) {
-                result = vec[index][mid].second;
-                l = mid+1;
-            } else {
-                r = mid-1;
-            }
-            
-        }
-        
-        return result;
+        return prev(it)->second;
         
     }
 };
-
 /**
  * Your SnapshotArray object will be instantiated and called as such:
  * SnapshotArray* obj = new SnapshotArray(length);
